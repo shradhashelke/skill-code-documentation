@@ -1,2 +1,3 @@
 # skill-code-documentation
-Code Documentation of Skill+ Project
+
+Repository is intended for creating the code documentation of skill+ project.
