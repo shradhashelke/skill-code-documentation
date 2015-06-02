@@ -4,7 +4,7 @@
  */
 class Administrator extends CI_Model {
 	/*
-	 * Global Bariable
+	 * Global Variable
 	 */
 	var $cname;
 	var $registerid;
