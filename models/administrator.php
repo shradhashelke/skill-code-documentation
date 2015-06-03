@@ -1,11 +1,18 @@
 <?php
 /**
- * All database operations i.e. business operations are done in model
+ * Class Administrator
  */
 class Administrator extends CI_Model {
-	/*
-	 * Global Variable
+	/**
+	 * Second Function.
+	 * A *description*, All database operations i.e. business operations are done.
+	 * A *description*, Global variables.
+	 * @param string $cname With a *Parameter* of this argument, these may also
+	 * @param string $registerid With a *Parameter* of this argument, these may also
+	 * @param string $email With a *Parameter* of this argument, these may also
+	 * @param string $mobile With a *Parameter* of this argument, these may also
 	 */
+	
 	var $cname;
 	var $registerid;
 	var $email;
@@ -26,9 +33,15 @@ class Administrator extends CI_Model {
 		$config['dbcollat'] = "utf8_general_ci";
 		return $config;
    }
-	/*
-	 * add new college
+	/**
+	 * addcollege Function.
+	 * A *description*, add new college.
+	 * @param string $cname With a *Parameter* of this argument, these may also
+	 * @param string $registerid With a *Parameter* of this argument, these may also
+	 * @param string $email With a *Parameter* of this argument, these may also
+	 * @param string $mobile With a *Parameter* of this argument, these may also
 	 */
+	 
    	function addcollege()
    {
 	   $this->cname=$_POST['cname'];
@@ -37,9 +50,14 @@ class Administrator extends CI_Model {
 	   $this->mobile=$_POST['mobile'];
 	   $this->saveexcelfiles();
    }
-	/*
-	 * save uploaded excel files
+	/**
+	 * saveexcelfiles Function.
+	 * A *description*, save uploaded excel files.
+	 * @param string $file1 With a *Parameter* of this argument, these may also
+	 * @param string $file2 With a *Parameter* of this argument, these may also
+	 * @param string $file3 With a *Parameter* of this argument, these may also
 	 */
+	 
    	function saveexcelfiles()
    {
 		$this->load->helper('form');// no use
@@ -72,9 +90,13 @@ class Administrator extends CI_Model {
 			$this->load->view('admin/super/footer');
 		}
    }
-	/*
-	 * send zip file to college
+	/**
+	 * savefilesanddata Function.
+	 * A *description*, Send zip file to college.
+	 * @param string $config With a *Parameter* of this argument, these may also
+	 * @param string $db1 With a *Parameter* of this argument, these may also
 	 */
+	
 	function savefilesanddata()
    {
 	   $config=$this->loadDatabase("skill");
