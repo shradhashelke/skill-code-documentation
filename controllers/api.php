@@ -63,9 +63,11 @@ class Api extends CI_Controller {
 		$this->session->set_userdata("validcard","1");
 		echo $cnt;
 	}
-	/*
-	 * Send periodic updates to user dashboard using ajax and json functions
-	 * [id]
+	/**
+	 * Dashboard Updates
+	 *
+	 * Frequent updates are sended to user dashboard via json arrays.
+	 * @return mixed User Updates
 	 */
 	public function updates($user)
 	{
