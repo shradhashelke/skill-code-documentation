@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * All database operations i.e. business operations are done in model
  */
 class Administrator extends CI_Model {
