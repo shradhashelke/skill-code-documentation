@@ -4,7 +4,7 @@
  */
 class Administrator extends CI_Model {
 	/**
-	 * Second Function.
+	 * loadDatabase Function.
 	 * A *description*, All database operations i.e. business operations are done.
 	 * A *description*, Global variables.
 	 * @param string $cname With a *Parameter* of this argument, these may also
