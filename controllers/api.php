@@ -1,19 +1,25 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-/*
- * Class is used to handle various ajax request used as background api's.
+/**
+ * Class Api : Used to perform various background operations requested via AJAX requests..
  */
 class Api extends CI_Controller {
-	/*
-	 * Return List of All students
+	/**
+	 * Student Information
+	 *
+	 * To retrive student information from database
+	 * @return mixed Student Record
 	 */
 	public function getstudent()
 	{
 		$this->load->model("apis");
 		$this->apis->getStudents();
 	}
-	/*
-	 * Show department based on id
+	/**
+	 * Department Information
+	 * 
+	 * To retrive department information from database based on id
+	 * @return mixed Department Record
+	 * @TODO: Use of POST data
 	 */
 	public function getDept()
 	{
@@ -97,9 +103,9 @@ class Api extends CI_Controller {
 			echo json_encode( $response );
 		}
 	}
-	/*
-	 * Load chat using ajax
-	 */
+	/**
+	 * 
+	 * */
 	public function chat($username)
 	{
 		$this->load->model("administrator");
